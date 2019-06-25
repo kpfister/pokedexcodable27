@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        PokemonControler.sharedInstance.fetchPokemonWith(searchTerm: "1") { (pokemon) in
+//            print(pokemon?.name)
+//        }
         // Override point for customization after application launch.
         return true
     }
