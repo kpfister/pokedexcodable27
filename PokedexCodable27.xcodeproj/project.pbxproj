@@ -52,13 +52,21 @@
 		FBF6038D22C28A0D00055E37 /* PokedexCodable27 */ = {
 			isa = PBXGroup;
 			children = (
-				FBF6038E22C28A0D00055E37 /* AppDelegate.swift */,
+				FBF603A022C28BAF00055E37 /* Resources */,
 				FBF6039222C28A0D00055E37 /* Main.storyboard */,
+			);
+			path = PokedexCodable27;
+			sourceTree = "<group>";
+		};
+		FBF603A022C28BAF00055E37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBF6038E22C28A0D00055E37 /* AppDelegate.swift */,
 				FBF6039522C28A0F00055E37 /* Assets.xcassets */,
 				FBF6039722C28A0F00055E37 /* LaunchScreen.storyboard */,
 				FBF6039A22C28A0F00055E37 /* Info.plist */,
 			);
-			path = PokedexCodable27;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
