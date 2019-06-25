@@ -6,7 +6,7 @@
 //  Copyright © 2019 Karl Pfister. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PokemonControler {
     
@@ -23,7 +23,6 @@ class PokemonControler {
         // Add /searchTerm
         guard let finalURL = pokemonPathComponetURL?.appendingPathComponent(searchTerm) else {return}
         print(finalURL)
-        
         
         URLSession.shared.dataTask(with: finalURL) { (data, _, error) in
             
@@ -42,6 +41,22 @@ class PokemonControler {
                     print("Error Fetching pokemon!")
                     completion(nil);return
                 }
+            }
+        }.resume()
+    }
+    
+    func fetchPokemonImage(pokemon: TopLevelDictionary, completion: @escaping (UIImage?) -> Void) {
+        // Build URL
+        let imageURL = pokemon.spritesDictionary.image
+        
+        URLSession.shared.dataTask(with: imageURL) { (data, _, error) in
+            if let error = error {
+                print("Error on image \(error.localizedDescription)")
+            }
+            
+            if let data = data {
+                guard let pokemonImage = UIImage(data: data) else {completion(nil);return}
+                completion(pokemonImage)
             }
         }.resume()
     }
